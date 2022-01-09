@@ -1,4 +1,4 @@
-export const meaningCloud = (str) => {
+export const meaningCloud = (type, str) => {
     const baseURL = 'https://api.meaningcloud.com/sentiment-2.1';
     let apiKey;
 

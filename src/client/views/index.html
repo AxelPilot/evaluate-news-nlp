@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>NLP</title>
+        <title>Natural Language Processing</title>
         <!-- Load Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
     </head>
@@ -17,9 +17,17 @@
 
         <main>
             <section class="formSection">
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form name="mcForm" onsubmit="return Client.handleSubmit(event)">
                     <div class="formDiv">
-                        <input id="url" type="text" name="url" placeholder="Enter url">
+                        <div class="radioButtons">
+                            <input type="radio" id="url" name="inputRadio" value="url" checked="checked">
+                            <label for="url">URL</label><br>
+                            <input type="radio" id="txt" name="inputRadio" value="txt">
+                            <label for="txt">Text</label><br>
+                        </div>
+
+                        <input id="inputURL" type="text" name="url" placeholder="Enter url">
+                        <textarea name="inputText" id="inputText" cols="30" rows="6" placeholder="Enter text"></textarea>
                         <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                     </div>
                 </form>

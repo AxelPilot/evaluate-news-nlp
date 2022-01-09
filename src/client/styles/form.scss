@@ -12,8 +12,27 @@
     padding: 50px;
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
 
+    .radioButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+        color: #333;
+    }
+    
+    #inputURL {
+        display: block;
+    }
+    
+    #inputText {
+        display: none;
+    }
+
     textarea {
+        border: 1px solid #979797;
         font-size: 1rem;
+        padding: 10px 20px;
+        line-height: 16px;
     }
 
     input {
@@ -21,7 +40,6 @@
         font-size: 1rem;
         padding: 10px 20px;
         line-height: 16px;
-
     }
 
     input[type="submit"] {

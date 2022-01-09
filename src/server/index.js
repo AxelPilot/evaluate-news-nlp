@@ -1,16 +1,13 @@
 const dotenv = require('dotenv');
 const path = require('path');
 const express = require('express');
-const retrieveData = require('./retrieve-data');
-const postData = require('./post-data');
+const mcPostData = require('./mc_post-data');
 const formatText = require('./formatText');
 const formatPolarity = require('./formatPolarity');
 
 dotenv.config();
 apiKeys = {
-    meaningCloud_API_KEY: process.env.meaningCloud_API_KEY,
-    newsAPI_KEY: process.env.newsAPI_KEY,
-    owm_API_KEY: process.env.owm_API_KEY
+    API_KEY: process.env.API_KEY,
 }
 
 const app = express();
@@ -37,10 +34,9 @@ app.get('/apiKeys', (req, res) => {
     res.send(apiKeys);
 });
 
-// Retrieve story from client.
-app.post('/url', (req, res) => {
-    const baseURL = 'https://api.meaningcloud.com/sentiment-2.1';
-    retrieveData(`${baseURL}?key=${apiKeys.meaningCloud_API_KEY}&of=json&url=${req.body.url}&lang=en`)
+// Retrieve url/story from client and pass it to the MeaningCloud API.
+app.post('/str', (req, res) => {
+    mcPostData(req.body.type, req.body.str)
         .then((data) => {
             res.send({
                 polarity: formatPolarity(data.score_tag),
@@ -53,7 +49,7 @@ app.post('/url', (req, res) => {
         .catch(error => console.log('Error', error));
 });
 
-// Designate what port the app will listen to for incoming requests
+// Designate what port the app will listen to for incoming requests.
 app.listen(8081, () => {
     console.log('Listening on port 8081!');
 });
