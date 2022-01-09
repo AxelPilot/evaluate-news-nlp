@@ -1,15 +1,17 @@
+@import "variables";
+
 .formSection {
     margin-top: 20px;
 }
 
 .formDiv {
-    background: rgba(255, 255, 255, 0.9);
+    background: $form_bg_color;
     display: flex;
     flex-direction: column;
     gap: 30px;
     border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 50px;
+    border-radius: $border_radius;
+    padding: $form_padding;
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
 
     .radioButtons {
@@ -17,7 +19,7 @@
         flex-direction: row;
         justify-content: center;
         column-gap: 5px;
-        color: #333;
+        color: $form_text_color;
     }
     
     #inputURL {
@@ -33,6 +35,7 @@
         font-size: 1rem;
         padding: 10px 20px;
         line-height: 16px;
+        border-radius: $border_radius;
     }
 
     input {
@@ -40,13 +43,14 @@
         font-size: 1rem;
         padding: 10px 20px;
         line-height: 16px;
+        border-radius: $border_radius;
     }
 
     input[type="submit"] {
         background: rgb(224, 239, 255);
 
         &:hover {
-            transform:scale(0.995, 0.985);
+            transform: scale(0.995, 0.985);
             background: rgb(212, 232, 255);
         }
     }
