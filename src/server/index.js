@@ -1,14 +1,7 @@
-const dotenv = require('dotenv');
-const path = require('path');
 const express = require('express');
 const mcPostData = require('./mc_post-data');
-const formatText = require('./formatText');
-const formatPolarity = require('./formatPolarity');
-
-dotenv.config();
-apiKeys = {
-    API_KEY: process.env.API_KEY,
-}
+const formatText = require('./format-text');
+const formatPolarity = require('./format-polarity');
 
 const app = express();
 app.use(express.static('dist'));
@@ -29,10 +22,6 @@ console.log(__dirname);
 app.get('/', (req, res) => {
     res.sendFile('/dist/index.html', { root: __dirname + '/../..' });
 })
-
-app.get('/apiKeys', (req, res) => {
-    res.send(apiKeys);
-});
 
 // Retrieve url/story from client and pass it to the MeaningCloud API.
 app.post('/str', (req, res) => {

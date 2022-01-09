@@ -41,10 +41,14 @@ export const handleSubmit = (event) => {
     }
 }
 
+/**
+ * 
+ * @param {*} res 
+ */
 const updateMcForm = (res) => {
     document.getElementById('polarity').textContent = `Polarity: ${res.polarity}`;
     document.getElementById('subjectivity').textContent = `Subjectivity: ${res.subjectivity}`;
     document.getElementById('irony').textContent = `Irony: ${res.irony}`;
-    document.getElementById('agreement').textContent = `Emotional agreement: ${res.agreement}`;
+    document.getElementById('agreement').textContent = `Emotional Agreement: ${res.agreement}`;
     document.getElementById('confidence').textContent = `Confidence: ${res.confidence}`;
 }
