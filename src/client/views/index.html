@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>NLP</title>
+        <!-- Load Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="heading">
+                <h1>Natural Language Processing</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="formSection">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <div class="formDiv">
+                        <input id="url" type="text" name="url" placeholder="Enter url">
+                        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    </div>
+                </form>
+            </section>
+
+            <section class="resultSection">
+                <div class="results">
+                    <strong>Form Results:</strong>
+                    <div id="polarity" class="result"></div>
+                    <div id="subjectivity" class="result"></div>
+                    <div id="irony" class="result"></div>
+                    <div id="agreement" class="result"></div>
+                    <div id="confidence" class="result"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+
+    </body>
+</html>
