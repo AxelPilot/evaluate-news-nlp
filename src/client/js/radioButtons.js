@@ -3,7 +3,7 @@
  * and a multi-line textarea where the user can enter a piece of text.
  */
 export const radioButtonListener = () => {
-    const radios = document.mcForm.inputRadio;
+    const radios = document.getElementsByName('inputRadio');
 
     radios.forEach((radio, i) => {
         radio.addEventListener('change', () => {
