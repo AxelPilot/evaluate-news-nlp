@@ -1,9 +1,13 @@
 /**
- * 
+ * Sends a POST request to the Meaning Cloud API
  * @param {string} url API url.
- * @param {string} type Either 'url' or 'txt'.
- * @param {string} str 
- * @returns {string} 
+ * @param {string} type Either 'url' or 'txt'. Determines
+ * whether a url or a piece of text should be sent to the
+ * Meaning Cloud API.
+ * @param {string} str Either a url or a piece of text to be
+ * sent to the Meaning Cloud API for sentiment analysis.
+ * @returns A JSON object with analysis data returned from
+ * the Meaning CLoud API.
  */
 module.exports = async function mcPostData(type, str) {
     const url = 'https://api.meaningcloud.com/sentiment-2.1';

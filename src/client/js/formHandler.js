@@ -1,3 +1,10 @@
+/**
+ * Handles the form submit event.
+ * Upon form submission, a URL or a piece of text is sent
+ * via the post route '/str' to the server for natural 
+ * language processing (NLP), using the MeaningCLoud API
+ * @param {Object} event 
+ */
 export const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -42,8 +49,9 @@ export const handleSubmit = (event) => {
 }
 
 /**
- * 
- * @param {*} res 
+ * Updates the html view with text analysis data returned
+ * from the MeaningCloud API.
+ * @param {*} res Response with data returned from the server.
  */
 const updateMcForm = (res) => {
     document.getElementById('polarity').textContent = `Polarity: ${res.polarity}`;

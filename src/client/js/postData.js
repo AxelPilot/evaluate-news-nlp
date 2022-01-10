@@ -1,5 +1,5 @@
 /**
- * Post data to the server.
+ * Posts data to the server.
  * @param {string} url 
  * @param {Object} data to be posted to the server.
  * @returns server response.

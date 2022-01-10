@@ -1,5 +1,5 @@
 const express = require('express');
-const mcPostData = require('./mc_post-data');
+const mcPostData = require('./mc-post-data');
 const formatText = require('./format-text');
 const formatPolarity = require('./format-polarity');
 
