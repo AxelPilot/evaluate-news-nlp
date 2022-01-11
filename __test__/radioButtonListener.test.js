@@ -3,7 +3,7 @@
  */
 import { radioButtonListener } from "../src/client/js/radioButtons";
 
-describe("Testing the radioButtonListener() function", () => {
+describe("Testing the radio button toggle functionality", () => {
     test("Testing the radioButtonListener() function", () => {
         expect(radioButtonListener).toBeDefined();
     });
