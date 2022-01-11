@@ -23,7 +23,7 @@ export const handleSubmit = (event) => {
             const str = document.getElementById('inputURL').value;
 
             if (Client.validURL(str)) {
-                Client.postData('https://evaluate-news-nlp2.herokuapp.com/str', {
+                Client.postData('/str', {
                     type: inputType,
                     str: str
                 })

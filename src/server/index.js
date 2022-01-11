@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 })
 
 // Retrieve url/story from client and pass it to the MeaningCloud API.
-app.post('https://evaluate-news-nlp2.herokuapp.com/str', (req, res) => {
+app.post('/str', (req, res) => {
     mcPostData(req.body.type, req.body.str)
         .then((data) => {
             res.send({
