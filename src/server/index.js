@@ -41,5 +41,5 @@ app.post('/str', (req, res) => {
 
 // Designate what port the app will listen to for incoming requests.
 app.listen(process.env.PORT || 8081, () => {
-    // console.log('Listening on port 8081!');
+    console.log('Listening on port 8081!');
 });
