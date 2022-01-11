@@ -13,12 +13,11 @@ module.exports = async function mcPostData(type, str) {
     const url = 'https://api.meaningcloud.com/sentiment-2.1';
     const dotenv = require('dotenv');
     const fetch = require('node-fetch');
-    let FormData = require('form-data');
+    const FormData = require('form-data');
     dotenv.config();
-    apiKey = process.env.API_KEY;
     
     const formData = new FormData();
-    formData.append('key', apiKey);
+    formData.append('key', process.env.API_KEY);
     formData.append(type, str);
     formData.append('lang', 'en');  // 2-letter code, like en es fr ...
 
@@ -26,7 +25,7 @@ module.exports = async function mcPostData(type, str) {
         method: 'POST',
         body: formData,
         redirect: 'follow'
-    };
+    }
 
     const response = await fetch(url, requestOptions);
 
@@ -35,4 +34,4 @@ module.exports = async function mcPostData(type, str) {
     } catch (error) {
         console.log('Error', error);
     }
-};
+}
