@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 })
 
 // Retrieve url/story from client and pass it to the MeaningCloud API.
-app.post('/str', (req, res) => {
+app.post('https://evaluate-news-nlp2.herokuapp.com/str', (req, res) => {
     mcPostData(req.body.type, req.body.str)
         .then((data) => {
             res.send({
@@ -41,5 +41,5 @@ app.post('/str', (req, res) => {
 
 // Designate what port the app will listen to for incoming requests.
 app.listen(process.env.PORT || 8081, () => {
-    console.log('Listening on port 8081!');
+    // console.log('Listening on port 8081!');
 });

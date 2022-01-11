@@ -23,7 +23,7 @@ export const handleSubmit = (event) => {
             const str = document.getElementById('inputURL').value;
 
             if (Client.validURL(str)) {
-                Client.postData('/str', {
+                Client.postData('https://evaluate-news-nlp2.herokuapp.com/str', {
                     type: inputType,
                     str: str
                 })
@@ -52,7 +52,7 @@ export const handleSubmit = (event) => {
 /**
  * Updates the html view with text analysis data returned
  * from the MeaningCloud API.
- * @param {*} res Response with data returned from the server.
+ * @param {Object} res Response with data returned from the server.
  */
 const updateMcForm = (res) => {
     document.getElementById('polarity').textContent = `Polarity: ${res.polarity}`;
