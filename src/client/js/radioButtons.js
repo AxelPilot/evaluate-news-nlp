@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Toggles between a single-line input field where the user can enter a URL,
  * and a multi-line textarea where the user can enter a piece of text.

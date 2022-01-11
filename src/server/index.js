@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const mcPostData = require('./mc-post-data');
 const formatText = require('./format-text');

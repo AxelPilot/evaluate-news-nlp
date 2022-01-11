@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Sends a POST request to the Meaning Cloud API
  * @param {string} url API url.

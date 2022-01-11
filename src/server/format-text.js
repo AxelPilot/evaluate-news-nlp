@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Converts uppercase text to lowercase with a capital first letter.
  * @param {string} text Text to be formatted.

@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Posts data to the server.
  * @param {string} url 

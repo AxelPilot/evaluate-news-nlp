@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Interprets the 'score_tag' property returned from 
  * the Meaning Cloud API.

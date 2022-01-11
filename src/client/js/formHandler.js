@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Handles the form submit event.
  * Upon form submission, a URL or a piece of text is sent
