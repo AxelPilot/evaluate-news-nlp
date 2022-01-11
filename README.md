@@ -69,3 +69,6 @@ process and analyze large amounts of natural language data.
 6. Start the server
 	- Run the command `npm run start`
 7. Open the browser at http://localhost:8081/
+
+The project is deployed to Heroku.com, with the following url:
+https://evaluate-news-nlp2.herokuapp.com/
