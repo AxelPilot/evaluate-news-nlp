@@ -25,6 +25,7 @@ process and analyze large amounts of natural language data.
 - cors
 - dotenv
 - express
+- form-data
 - node-fetch
 
 ## Developer Dependencies
