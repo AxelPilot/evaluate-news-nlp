@@ -1,4 +1,10 @@
 'use strict';
+const url = 'https://api.meaningcloud.com/sentiment-2.1';
+const dotenv = require('dotenv');
+const fetch = require('node-fetch');
+const FormData = require('form-data');
+dotenv.config();
+
 /**
  * Sends a POST request to the Meaning Cloud API
  * @param {string} url API url.
@@ -11,11 +17,6 @@
  * the Meaning CLoud API.
  */
 module.exports = async function mcPostData(type, str) {
-    const url = 'https://api.meaningcloud.com/sentiment-2.1';
-    const dotenv = require('dotenv');
-    const fetch = require('node-fetch');
-    const FormData = require('form-data');
-    dotenv.config();
     
     const formData = new FormData();
     formData.append('key', process.env.API_KEY);

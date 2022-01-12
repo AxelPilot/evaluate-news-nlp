@@ -6,12 +6,12 @@
 export const radioButtonListener = () => {
     const radios = document.getElementsByName('inputRadio');
 
-    radios.forEach((radio, i) => {
+    radios.forEach((radio, index) => {
         radio.addEventListener('change', () => {
-            if (i == 1) {
+            if (index == 1) {
                 document.getElementById('inputURL').style.display = 'none';
                 document.getElementById('inputText').style.display = 'block';
-            } else if (i == 0) {
+            } else if (index == 0) {
                 document.getElementById('inputText').style.display = 'none';
                 document.getElementById('inputURL').style.display = 'block';
             }

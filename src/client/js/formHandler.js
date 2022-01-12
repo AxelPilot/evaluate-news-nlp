@@ -12,7 +12,7 @@ export const handleSubmit = (event) => {
     try {
         let inputType;
         const radioButtons = document.querySelectorAll('input[name="inputRadio"]');
-        radioButtons.forEach((radio, index) => {
+        radioButtons.forEach(radio => {
             if (radio.checked) {
                 inputType = radio.value;
             }
