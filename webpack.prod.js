@@ -13,6 +13,7 @@ module.exports = {
     output: {
         libraryTarget: 'var',
         library: 'Client',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
@@ -41,7 +42,7 @@ module.exports = {
             filename: './index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+            filename: '[name].[contenthash].css'
         }),
         new WorkboxPlugin.GenerateSW()
     ]

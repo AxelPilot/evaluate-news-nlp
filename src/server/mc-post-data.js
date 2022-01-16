@@ -14,7 +14,7 @@ dotenv.config();
  * @param {string} str Either a url or a piece of text to be
  * sent to the Meaning Cloud API for sentiment analysis.
  * @returns A JSON object with analysis data returned from
- * the Meaning CLoud API.
+ * the Meaning Cloud API.
  */
 module.exports = async function mcPostData(type, str) {
     
